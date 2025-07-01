@@ -1,3 +1,7 @@
-theme: jekyll-theme-minimal
+remote_theme: ngzhio/jekyll-theme-hamilton
+plugins:
+  - jekyll-remote-theme
 title: "Carlos Chaves – Head of QA"
 subtitle: "Building quality culture through automation, strategy, and continuous learning"
+github: cchaves21
+linkedin: http://www.linkedin.com/in/carlos-chaves-3b616924
