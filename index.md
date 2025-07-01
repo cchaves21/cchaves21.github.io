@@ -1,9 +1,3 @@
----
-layout: home
-title: "Carlos Chaves – Head of QA"
-subtitle: "Building quality culture through automation, strategy, and continuous learning"
----
-
 ## About Me
 
 I'm Carlos, a QA professional with over 15 years of experience in software quality, automation, and technical leadership. I started my journey in São Paulo, Brazil, working at a consultancy focused on integrated business solutions. What began as an internship quickly turned into a lifelong passion for testing and quality engineering.
