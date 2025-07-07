@@ -1,5 +1,5 @@
 remote_theme: ngzhio/jekyll-theme-hamilton
-theme: midnight
+skin: midnight
 plugins:
   - jekyll-remote-theme
 title: "Carlos Chaves – Head of QA"
