@@ -30,5 +30,5 @@ Good QA is proactive, not reactive.
 ## Contact
 
 - 📧 Email: carlos@carloschaves.com  
-- 💼 [LinkedIn](www.linkedin.com/in/carlos-chaves-3b616924)  
+- 💼 [LinkedIn](http://www.linkedin.com/in/carlos-chaves-3b616924)  
 - 💻 [GitHub](https://github.com/cchaves21)
