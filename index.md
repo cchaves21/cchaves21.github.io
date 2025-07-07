@@ -22,7 +22,7 @@ Currently, I serve as **Head of QA** in a British company, where I lead strategi
 
 ## What Drives Me
 
-I believe quality is not just about finding bugs — it's about **building confidence** in what we deliver, **enabling developers**, and **championing user experience**.  
+I believe quality is not just about finding bugs, it's about **building confidence** in what we deliver, **enabling developers**, and **championing user experience**.  
 Good QA is proactive, not reactive.
 
 ---
