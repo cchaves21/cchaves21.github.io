@@ -2,10 +2,13 @@ remote_theme: ngzhio/jekyll-theme-hamilton
 skin: midnight
 plugins:
   - jekyll-remote-theme
+  - jekyll-seo-tag
+  - jekyll-sitemap
 title: "Carlos Chaves – Head of QA"
 subtitle: "Building quality culture through automation, strategy, and continuous learning"
+description: >-
+  Carlos Chaves is a QA engineer with over 15 years of experience in software testing, automation, and quality culture. Passionate about mentoring and continuous improvement.
 avatar: /logo.png
-email: carlosrschaves@gmail.com
 subscribe: false
 social:
   name: Carlos Chaves

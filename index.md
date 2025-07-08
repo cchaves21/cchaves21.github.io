@@ -24,11 +24,3 @@ Currently, I serve as **Head of QA** in a British company, where I lead strategi
 
 I believe quality is not just about finding bugs, it's about **building confidence** in what we deliver, **enabling developers**, and **championing user experience**.  
 Good QA is proactive, not reactive.
-
----
-
-## Contact
-
-- 📧 Email: carlos@carloschaves.com  
-- 💼 [LinkedIn](http://www.linkedin.com/in/carlos-chaves-3b616924)  
-- 💻 [GitHub](https://github.com/cchaves21)
