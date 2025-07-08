@@ -17,7 +17,7 @@ Currently, I serve as **Head of QA** in a British company that has scaled revenu
 - 🏆 Received the **PRAD Recognition Award** from the largest bank in Latin America for my QA leadership during the launch of **PIX**, a real-time payment system that revolutionized the Brazilian financial market   
 - 🤝 Passionate about **mentoring**, **documentation**, and **cross-functional collaboration**
 
-<a href="/study-cases" class="btn btn-primary">📂 View Case Studies</a>
+<a href="/case-studies" class="btn btn-primary">📂 View Case Studies</a>
 
 ---
 
