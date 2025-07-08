@@ -18,6 +18,7 @@ Currently, I serve as **Head of QA** in a British company that has scaled revenu
 - 🤝 Passionate about **mentoring**, **documentation**, and **cross-functional collaboration**
 
 <a href="/case-studies" class="btn btn-primary">📂 View Case Studies</a>
+<a href="/tech-stack" class="btn btn-primary">🛠 Thech Stack</a>
 
 ---
 
