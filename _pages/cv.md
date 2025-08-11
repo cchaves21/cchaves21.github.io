@@ -5,7 +5,7 @@ permalink: /cv/
 ---
 
 <style>
-/* Modern CV Styling - Dark Theme Optimized */
+/* Dark Theme Optimized */
 .cv-header {
   text-align: center;
   margin-bottom: 40px;
@@ -106,7 +106,7 @@ permalink: /cv/
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* Professional Summary */
+/* Summary */
 .summary-box {
   background: linear-gradient(135deg, rgba(0, 217, 255, 0.1) 0%, rgba(26, 26, 46, 0.8) 100%);
   border: 1px solid rgba(0, 217, 255, 0.3);
@@ -145,7 +145,7 @@ permalink: /cv/
   border-left-color: #00e6ff;
 }
 
-/* Timeline melhorada */
+/* Timeline */
 .timeline {
   position: relative;
   margin: 40px 0;
@@ -304,7 +304,7 @@ permalink: /cv/
   font-weight: 600;
 }
 
-/* Responsividade */
+/* Responsive*/
 @media (max-width: 768px) {
   .cv-header {
     padding: 20px 15px;
@@ -337,7 +337,7 @@ permalink: /cv/
   }
 }
 
-/* Animações */
+/* Animations */
 html {
   scroll-behavior: smooth;
 }

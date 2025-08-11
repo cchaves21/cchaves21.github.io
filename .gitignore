@@ -1,22 +1,20 @@
-# Build do Jekyll
+# Jekyll Build
 _site/
 .sass-cache/
 .jekyll-cache/
 .jekyll-metadata
 
-# Dependências locais (gems)
+# Local dependecies (gems)
 vendor/
 
-# Arquivos temporários do sistema
+# Temp Files
 *.log
 *.tmp
 *.swp
 
-# Arquivos do sistema operacional
+# OS files
 .DS_Store        # macOS
 Thumbs.db        # Windows
 
-# Arquivos gerados pelo editor
-.idea/
+# VS code files
 .vscode/
-*.code-workspace
