@@ -44,7 +44,7 @@ permalink: /tech-stack/
     <div>Selenium</div>
   </div>
   <div class="tech-item">
-    <img src="/cypressio.svg" alt="Cypress" width="40"/>
+    <img src="/assets/cypressio.svg" alt="Cypress" width="40"/>
     <div>Cypress</div>
   </div>
   <div class="tech-item">
