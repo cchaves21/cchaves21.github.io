@@ -510,7 +510,7 @@ Results-driven QA professional with more than 15 years of experience in software
   </div>
   <div class="language-item">
     <div>English</div>
-    <div class="level">C1/C2</div>
+    <div class="level">Fluent</div>
   </div>
 </div>
 

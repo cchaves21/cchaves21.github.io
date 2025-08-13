@@ -5,107 +5,154 @@ permalink: /case-studies/
 ---
 
 <style>
+/* Case Studies - Dark Theme Consistent with Site */
 .hero-section {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  padding: 4rem 2rem;
-  margin: -2rem -2rem 3rem -2rem;
   text-align: center;
-  border-radius: 0 0 2rem 2rem;
+  margin-bottom: 50px;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  border-radius: 20px;
+  border-left: 6px solid #00d9ff;
+  box-shadow: 0 12px 40px rgba(0, 217, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 100%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(0, 217, 255, 0.1) 0%, transparent 70%);
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(5deg); }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
 }
 
 .hero-title {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+  color: #ffffff;
+  margin-bottom: 15px;
+  font-size: 2.8em;
   font-weight: 700;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .hero-subtitle {
-  font-size: 1.2rem;
-  opacity: 0.9;
-  max-width: 600px;
-  margin: 0 auto;
+  color: #00d9ff;
+  font-size: 1.5em;
+  font-weight: 500;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .projects-grid {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
-  margin-bottom: 3rem;
+  gap: 40px;
+  margin-bottom: 50px;
 }
 
 .project-card {
-  background: white;
-  border-radius: 1.5rem;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  background: linear-gradient(135deg, rgba(26, 26, 46, 0.95), rgba(22, 33, 62, 0.95));
+  border: 1px solid rgba(0, 217, 255, 0.3);
+  border-radius: 20px;
+  border-left: 6px solid #00d9ff;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 2px solid #f0f0f0;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(0, 217, 255, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  transform: translate(50px, -50px);
 }
 
 .project-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  box-shadow: 0 20px 60px rgba(0, 217, 255, 0.2);
+  border-color: rgba(0, 217, 255, 0.6);
 }
 
 .project-header {
-  padding: 2rem;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 30px;
   position: relative;
+  z-index: 2;
 }
 
 .project-icon {
   font-size: 3rem;
   display: block;
-  margin-bottom: 1rem;
+  margin-bottom: 15px;
 }
 
 .project-header h2 {
-  margin: 0 0 1rem 0;
-  color: #2d3748;
-  font-size: 1.8rem;
+  margin: 0 0 15px 0;
+  color: #ffffff;
+  font-size: 2em;
   font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .project-badge {
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
-  padding: 0.5rem 1rem;
-  border-radius: 2rem;
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 25px;
   font-size: 0.9rem;
   font-weight: 600;
-  color: white;
-}
-
-.project-badge.brazil {
-  background: linear-gradient(135deg, #00b09b, #96c93d);
-}
-
-.project-badge.uk {
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #000000;
+  background: linear-gradient(135deg, #00d9ff, #0099cc);
+  box-shadow: 0 4px 15px rgba(0, 217, 255, 0.3);
+  margin-top: 10px;
 }
 
 .project-description {
-  padding: 0 2rem;
-  font-size: 1.1rem;
+  padding: 0 30px;
+  font-size: 1.2rem;
   line-height: 1.7;
-  color: #4a5568;
+  color: #e0e0e0;
+  position: relative;
+  z-index: 2;
 }
 
 .project-details {
-  padding: 2rem;
+  padding: 30px;
+  position: relative;
+  z-index: 2;
 }
 
 .detail-section, .impact-section, .metrics-section {
-  margin-bottom: 2rem;
+  margin-bottom: 30px;
 }
 
 .detail-section h4, .impact-section h4, .metrics-section h4 {
-  color: #2d3748;
-  margin-bottom: 1rem;
-  font-size: 1.2rem;
+  color: #00d9ff;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
   font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .detail-section ul {
@@ -114,144 +161,226 @@ permalink: /case-studies/
 }
 
 .detail-section li {
-  padding: 0.5rem 0;
-  padding-left: 1.5rem;
+  padding: 8px 0;
+  padding-left: 20px;
   position: relative;
   line-height: 1.6;
+  color: #e0e0e0;
 }
 
 .detail-section li:before {
   content: "→";
   position: absolute;
   left: 0;
-  color: #667eea;
+  color: #00d9ff;
   font-weight: bold;
+  font-size: 1.2em;
 }
 
 .achievements {
   display: grid;
-  gap: 1rem;
+  gap: 15px;
 }
 
 .achievement {
   display: flex;
   align-items: flex-start;
-  gap: 1rem;
-  padding: 1rem;
-  background: #f7fafc;
-  border-radius: 1rem;
-  border-left: 4px solid #667eea;
+  gap: 15px;
+  padding: 20px;
+  background: linear-gradient(135deg, rgba(0, 217, 255, 0.1) 0%, rgba(26, 26, 46, 0.8) 100%);
+  border: 1px solid rgba(0, 217, 255, 0.3);
+  border-radius: 15px;
+  border-left: 4px solid #00d9ff;
+  transition: all 0.3s ease;
+}
+
+.achievement:hover {
+  transform: translateX(5px);
+  box-shadow: 0 8px 25px rgba(0, 217, 255, 0.2);
 }
 
 .achievement.award {
-  background: linear-gradient(135deg, #fef5e7, #fed7aa);
-  border-left-color: #f6ad55;
+  border-left-color: #00e6ff;
+  background: linear-gradient(135deg, rgba(0, 230, 255, 0.15) 0%, rgba(26, 26, 46, 0.9) 100%);
 }
 
 .achievement-icon {
-  font-size: 1.5rem;
+  font-size: 2rem;
   flex-shrink: 0;
 }
 
 .achievement strong {
   display: block;
-  margin-bottom: 0.25rem;
-  color: #2d3748;
+  margin-bottom: 5px;
+  color: #ffffff;
+  font-size: 1.1em;
+}
+
+.achievement p {
+  color: #e0e0e0;
+  margin: 0;
+  line-height: 1.6;
 }
 
 .metrics-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1rem;
-  margin-bottom: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  margin-bottom: 20px;
 }
 
 .metric {
   text-align: center;
-  padding: 1.5rem;
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  color: white;
-  border-radius: 1rem;
-  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+  padding: 25px;
+  background: linear-gradient(135deg, #00d9ff, #0099cc);
+  color: #000000;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 217, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.metric:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(0, 217, 255, 0.4);
 }
 
 .metric-value {
   display: block;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 700;
-  margin-bottom: 0.5rem;
+  margin-bottom: 8px;
 }
 
 .metric-label {
-  font-size: 0.9rem;
+  font-size: 1rem;
+  font-weight: 600;
   opacity: 0.9;
 }
 
+.additional-impacts {
+  background: linear-gradient(135deg, rgba(26, 26, 46, 0.9), rgba(22, 33, 62, 0.9));
+  border: 1px solid rgba(0, 217, 255, 0.3);
+  border-radius: 12px;
+  padding: 20px;
+  border-left: 4px solid #00d9ff;
+}
+
 .additional-impacts p {
-  margin: 0.5rem 0;
-  color: #4a5568;
-  font-size: 0.95rem;
+  margin: 8px 0;
+  color: #e0e0e0;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 .cta-section {
   text-align: center;
-  padding: 3rem 2rem;
-  background: linear-gradient(135deg, #f7fafc, #edf2f7);
-  border-radius: 1.5rem;
-  margin-top: 2rem;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, rgba(0, 217, 255, 0.15) 0%, rgba(26, 26, 46, 0.9) 100%);
+  border: 1px solid rgba(0, 217, 255, 0.4);
+  border-left: 6px solid #00d9ff;
+  border-radius: 20px;
+  margin-top: 40px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(0, 217, 255, 0.05) 0%, transparent 70%);
+  animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.1); opacity: 0.8; }
 }
 
 .cta-section p {
-  font-size: 1.2rem;
-  color: #4a5568;
-  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+  color: #e0e0e0;
+  margin-bottom: 25px;
+  position: relative;
+  z-index: 2;
 }
 
 .cta-button {
   display: inline-block;
-  padding: 1rem 2rem;
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  color: white;
+  padding: 15px 30px;
+  background: linear-gradient(135deg, #00d9ff, #0099cc);
+  color: #000000;
   text-decoration: none;
-  border-radius: 2rem;
+  border-radius: 30px;
   font-weight: 600;
+  font-size: 1.1em;
   transition: all 0.3s ease;
-  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 6px 25px rgba(0, 217, 255, 0.4);
+  position: relative;
+  z-index: 2;
 }
 
 .cta-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 35px rgba(0, 217, 255, 0.6);
+  background: linear-gradient(135deg, #00e6ff, #00b3e6);
   text-decoration: none;
-  color: white;
+  color: #000000;
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
   .hero-section {
-    padding: 2rem 1rem;
-    margin: -1rem -1rem 2rem -1rem;
+    padding: 30px 15px;
   }
   
   .hero-title {
-    font-size: 2rem;
+    font-size: 2.2em;
   }
   
-  .project-header {
-    padding: 1.5rem;
+  .hero-subtitle {
+    font-size: 1.3em;
   }
   
-  .project-badge {
-    position: static;
-    margin-top: 1rem;
-    display: inline-block;
+  .project-header, .project-details, .project-description {
+    padding: 20px;
   }
   
-  .project-details {
-    padding: 1.5rem;
+  .project-header h2 {
+    font-size: 1.6em;
   }
   
   .metrics-grid {
     grid-template-columns: 1fr;
+  }
+  
+  .achievement {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Smooth Scrolling & Animations */
+html {
+  scroll-behavior: smooth;
+}
+
+.project-card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 </style>
@@ -264,11 +393,11 @@ permalink: /case-studies/
 </div>
 
 <div class="projects-grid">
-  <div class="project-card featured">
+  <div class="project-card">
     <div class="project-header">
       <span class="project-icon">💸</span>
       <h2>Pix – A New Era of Payments</h2>
-      <span class="project-badge brazil">Brazil • 2020</span>
+      <span class="project-badge">Brazil • 2020</span>
     </div>
     <div class="project-description">
       <p>Key QA role in the launch of Pix, Brazil's groundbreaking instant payment system that transformed the financial landscape at the largest bank in Latin America.</p>
@@ -315,11 +444,11 @@ permalink: /case-studies/
     </div>
   </div>
 
-  <div class="project-card featured">
+  <div class="project-card">
     <div class="project-header">
       <span class="project-icon">🧭</span>
       <h2>Epos Now – Building a Culture of Quality</h2>
-      <span class="project-badge uk">UK • 2022-Present</span>
+      <span class="project-badge">UK • 2022-Present</span>
     </div>
     <div class="project-description">
       <p>Joined as <strong>Senior QA Engineer</strong> and promoted to <strong>Head of QA</strong> at a leading POS systems provider, scaling to over $150M annual revenue.</p>
@@ -375,5 +504,5 @@ permalink: /case-studies/
 
 <div class="cta-section">
   <p>Want to know more about these projects or discuss similar challenges?</p>
-  <a href="/contact/" class="cta-button">Let's Connect</a>
+  <a href="/#contact" class="cta-button">Let's Connect</a>
 </div>
