@@ -636,7 +636,6 @@ html {
 
   <div class="action-buttons">
     <a href="/case-studies" class="cta-btn primary">📂 View Case Studies</a>
-    <a href="/tech-stack" class="cta-btn secondary">🛠 Tech Stack</a>
   </div>
 </div>
 
