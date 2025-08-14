@@ -1,0 +1,81 @@
+// Colors
+$primary-color: #00d9ff;
+$primary-hover: #00e6ff;
+$primary-dark: #0099cc;
+$primary-darker: #006699;
+
+$secondary-color: #00ff88;
+$secondary-dark: #00cc6a;
+
+$dark-primary: #1a1a2e;
+$dark-secondary: #16213e;
+$dark-tertiary: #16213e;
+
+$white: #ffffff;
+$light-gray: #e0e0e0;
+$medium-gray: #b3b3b3;
+$black: #000000;
+
+// Gradients
+$gradient-primary: linear-gradient(135deg, #{$primary-color}, #{$primary-dark});
+$gradient-dark: linear-gradient(135deg, #{$dark-primary} 0%, #{$dark-secondary} 100%);
+$gradient-dark-alt: linear-gradient(135deg, rgba(26, 26, 46, 0.9), rgba(22, 33, 62, 0.9));
+$gradient-accent: linear-gradient(135deg, rgba(0, 217, 255, 0.1) 0%, rgba(26, 26, 46, 0.8) 100%);
+$gradient-accent-alt: linear-gradient(135deg, rgba(0, 217, 255, 0.15) 0%, rgba(26, 26, 46, 0.9) 100%);
+
+// Typography
+$font-size-base: 1rem;
+$font-size-lg: 1.1rem;
+$font-size-xl: 1.2rem;
+$font-size-xxl: 1.3rem;
+$font-size-xxxl: 1.5rem;
+$font-size-display: 2.8rem;
+$font-size-h1: 2.2rem;
+$font-size-h2: 2rem;
+$font-size-h3: 1.8rem;
+$font-size-h4: 1.3rem;
+
+$line-height-base: 1.6;
+$line-height-relaxed: 1.7;
+$line-height-loose: 1.8;
+
+// Spacing
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 15px;
+$spacing-lg: 20px;
+$spacing-xl: 25px;
+$spacing-xxl: 30px;
+$spacing-xxxl: 40px;
+$spacing-huge: 50px;
+
+// Borders & Border Radius
+$border-radius-sm: 8px;
+$border-radius-md: 12px;
+$border-radius-lg: 15px;
+$border-radius-xl: 20px;
+$border-radius-round: 25px;
+$border-radius-full: 50%;
+
+// Spacing for border-radius (aliases)
+$spacing-round: 25px;  // mesmo valor que $border-radius-round
+
+// Shadows
+$shadow-sm: 0 4px 15px rgba(0, 217, 255, 0.3);
+$shadow-md: 0 6px 25px rgba(0, 217, 255, 0.4);
+$shadow-lg: 0 8px 30px rgba(0, 217, 255, 0.2);
+$shadow-xl: 0 10px 35px rgba(0, 217, 255, 0.6);
+$shadow-xxl: 0 12px 40px rgba(0, 217, 255, 0.2);
+$shadow-huge: 0 15px 50px rgba(0, 217, 255, 0.2);
+$shadow-dark: 0 8px 32px rgba(0, 0, 0, 0.4);
+$shadow-dark-lg: 0 12px 40px rgba(0, 0, 0, 0.3);
+
+// Transitions
+$transition-fast: 0.2s ease;
+$transition-base: 0.3s ease;
+$transition-slow: 0.4s ease;
+
+// Breakpoints
+$mobile: 768px;
+$tablet: 1024px;
+$desktop: 1200px;
