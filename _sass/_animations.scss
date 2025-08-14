@@ -1,0 +1,161 @@
+// =========================
+// KEYFRAME ANIMATIONS
+// =========================
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// =========================
+// RESPONSIVE DESIGN
+// =========================
+@media (max-width: $mobile) {
+
+  // Hero Section
+  .hero-section {
+    padding: $spacing-xxl $spacing-md;
+
+    h1,
+    .hero-title {
+      font-size: $font-size-h1;
+    }
+
+    .hero-subtitle {
+      font-size: $font-size-xxl;
+    }
+
+    .social-links {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  // Buttons
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  // Navigation
+  .nav-grid {
+    grid-template-columns: 1fr;
+  }
+
+  // Grids
+  .tech-stack {
+    grid-template-columns: 1fr;
+  }
+
+  .articles-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .highlights-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  // Highlight Items
+  .highlight-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  // Project Cards
+  .project-header,
+  .project-details,
+  .project-description {
+    padding: $spacing-lg;
+  }
+
+  .project-header h2 {
+    font-size: 1.6em;
+  }
+
+  // Timeline
+  .timeline {
+    padding-left: 25px;
+    margin: $spacing-lg 0;
+  }
+
+  .timeline-item {
+    margin-left: -10px;
+    padding: $spacing-lg 16px;
+    margin-bottom: $spacing-xl;
+
+    &::before {
+      left: -22px;
+      width: 16px;
+      height: 16px;
+      top: 18px;
+    }
+  }
+
+  // CV Header
+  .cv-header {
+    padding: $spacing-lg $spacing-md;
+
+    h1 {
+      font-size: 1.8em;
+    }
+  }
+
+  // Achievements
+  .achievement {
+    flex-direction: column;
+    text-align: center;
+  }
+}
