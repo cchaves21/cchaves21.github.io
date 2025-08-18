@@ -27,6 +27,7 @@ The site is built with:
 ├── _posts/              # Blog posts (optional)
 ├── _data/               # Data for navigation and social links
 ├── _sass/               # Theme styles
+├── _includes/           # Import personal styles
 ├── assets/
 │   ├── css/             # Custom SCSS styles
 │   └── images/          # Logos, photos, and images
