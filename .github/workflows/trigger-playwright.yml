@@ -1,4 +1,4 @@
-name: Trigger Playwright Tests
+name: Run Playwright Tests
 
 on:
   pull_request:
@@ -10,19 +10,59 @@ on:
       - main
 
 jobs:
-  trigger-tests:
+  playwright-tests:
     runs-on: ubuntu-latest
     steps:
-      - name: Trigger Playwright Repository Tests
-        run: |
-          curl -X POST \
-            -H "Accept: application/vnd.github+json" \
-            -H "Authorization: Bearer ${{ secrets.PLAYWRIGHT_TRIGGER_TOKEN }}" \
-            -H "X-GitHub-Api-Version: 2022-11-28" \
-            https://api.github.com/repos/cchaves21/Playwright-site-checker/dispatches \
-            -d '{"event_type":"run-playwright-tests","client_payload":{"repository":"${{ github.repository }}","ref":"${{ github.ref }}","sha":"${{ github.sha }}"}}'
+      - name: Checkout GitHub Pages repository
+        uses: actions/checkout@v4
+        with:
+          path: site
 
-      - name: Check API Response
-        if: failure()
-        run: |
-          echo "Failed to trigger Playwright tests. Check token permissions and repository settings."
+      - name: Checkout Playwright tests repository
+        uses: actions/checkout@v4
+        with:
+          repository: cchaves21/Playwright-site-checker
+          path: playwright-tests
+          token: ${{ secrets.PLAYWRIGHT_TRIGGER_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install Playwright dependencies
+        working-directory: playwright-tests
+        run: npm ci
+
+      - name: Install Playwright browsers
+        working-directory: playwright-tests
+        run: npx playwright install --with-deps
+
+      - name: Build/Deploy site (if needed)
+        working-directory: site
+        run: bundle install
+
+      - name: Start local server (if needed)
+        working-directory: site
+        run: bundle exec jekyll serve
+          echo "Using deployed site for testing"
+
+      - name: Run Playwright tests
+        working-directory: playwright-tests
+        run: BASE_URL=http://localhost:4000  npx playwright test
+
+      - name: Upload Playwright report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: playwright-report
+          path: playwright-tests/playwright-report/
+          retention-days: 7
+
+      - name: Upload test results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: test-results
+          path: playwright-tests/test-results/
+          retention-days: 7
