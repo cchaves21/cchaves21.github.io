@@ -19,3 +19,4 @@ collections:
     permalink: /:path/
 exclude:
   - README.md
+  - vendor
