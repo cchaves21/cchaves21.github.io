@@ -25,6 +25,13 @@ jobs:
           path: playwright-tests
           token: ${{ secrets.PLAYWRIGHT_TRIGGER_TOKEN }}
 
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1'
+          bundler-cache: true
+          working-directory: site
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -38,18 +45,24 @@ jobs:
         working-directory: playwright-tests
         run: npx playwright install --with-deps
 
-      - name: Build/Deploy site (if needed)
+      - name: Build Jekyll site
         working-directory: site
-        run: bundle install
+        run: |
+          bundle install
+          bundle exec jekyll build
 
-      - name: Start local server (if needed)
+      - name: Start Jekyll server
         working-directory: site
-        run: bundle exec jekyll serve
-          echo "Using deployed site for testing"
+        run: |
+          bundle exec jekyll serve --detach --port 4000
+          sleep 10
+          echo "Jekyll server started on http://localhost:4000"
 
       - name: Run Playwright tests
         working-directory: playwright-tests
-        run: BASE_URL=http://localhost:4000  npx playwright test
+        env:
+          BASE_URL: http://localhost:4000
+        run: npx playwright test
 
       - name: Upload Playwright report
         uses: actions/upload-artifact@v4
