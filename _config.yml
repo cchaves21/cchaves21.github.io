@@ -17,3 +17,5 @@ collections:
   pages:
     output: true
     permalink: /:path/
+exclude:
+  - README.md
