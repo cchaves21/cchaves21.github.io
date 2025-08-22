@@ -21,7 +21,7 @@ jobs:
       - name: Checkout Playwright tests repository
         uses: actions/checkout@v4
         with:
-          repository: cchaves21/Playwright-site-checker
+          repository: cchaves21/playwright-site-checker
           path: playwright-tests
           token: ${{ secrets.PLAYWRIGHT_TRIGGER_TOKEN }}
 
